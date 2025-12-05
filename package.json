@@ -1,0 +1,20 @@
+{
+  "name": "love-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/zaheenuddinkhanmasood2-lang/Love-Calculator-original#readme",
+  "bugs": {
+    "url": "https://github.com/zaheenuddinkhanmasood2-lang/Love-Calculator-original/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaheenuddinkhanmasood2-lang/Love-Calculator-original.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "common.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

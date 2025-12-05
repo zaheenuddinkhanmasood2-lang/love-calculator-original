@@ -6,4 +6,3 @@ Sitemap: https://mylovecalculate.com/sitemap.xml
 
 # Disallow generator tool
 Disallow: /create-favicons.html
-
