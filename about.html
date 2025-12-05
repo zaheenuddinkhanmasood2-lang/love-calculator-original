@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>About - Love Calculator & Love Tester</title>
+    <meta name="title" content="About - Love Calculator & Love Tester">
+    <meta name="description"
+        content="Learn how the Love Calculator works, understand the algorithm, and discover how we protect your privacy. Free online compatibility calculator.">
+    <meta name="keywords"
+        content="about love calculator, how love calculator works, love calculator algorithm, privacy love calculator">
+    <meta name="author" content="Love Calculator">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <link rel="canonical" href="https://mylovecalculator.com/about.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mylovecalculator.com/about.html">
+    <meta property="og:title" content="About - Love Calculator & Love Tester">
+    <meta property="og:description"
+        content="Learn how the Love Calculator works, understand the algorithm, and discover how we protect your privacy.">
+    <meta property="og:image" content="https://mylovecalculator.com/love-calculator-og-image.jpg">
+    <meta property="og:site_name" content="Love Calculator">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mylovecalculator.com/about.html">
+    <meta property="twitter:title" content="About - Love Calculator & Love Tester">
+    <meta property="twitter:description"
+        content="Learn how the Love Calculator works, understand the algorithm, and discover how we protect your privacy.">
+    <meta property="twitter:image" content="https://mylovecalculator.com/love-calculator-twitter-image.jpg">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#b3002d">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#b3002d',
+                        secondary: '#80001f',
+                        accent: '#ff6b8a',
+                        'light-section': '#ffe3ea',
+                        'bg-deep': '#11030a',
+                        'text-light': '#ffffff',
+                        'text-dark': '#111827',
+                        muted: '#fecdd3',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="font-sans bg-gradient-romantic text-text-light min-h-screen overflow-x-hidden relative">
+    <div class="fixed top-0 left-0 w-full h-full z-0 overflow-hidden">
+        <div
+            class="absolute rounded-full blur-[80px] opacity-50 w-[500px] h-[500px] bg-[rgba(179,0,45,0.8)] -top-[200px] -left-[200px] animate-float">
+        </div>
+        <div class="absolute rounded-full blur-[80px] opacity-50 w-[400px] h-[400px] bg-[rgba(255,107,138,0.7)] -bottom-[200px] -right-[200px] animate-float"
+            style="animation-delay: 5s;"></div>
+        <div class="absolute rounded-full blur-[80px] opacity-50 w-[350px] h-[350px] bg-[rgba(255,227,234,0.7)] top-1/2 -right-[100px] animate-float"
+            style="animation-delay: 10s;"></div>
+    </div>
+
+    <div class="hidden fixed top-0 left-0 w-full h-full bg-black/70 z-[999] opacity-0 transition-opacity duration-300 ease-in-out"
+        id="menuOverlay"></div>
+    <nav
+        class="fixed top-0 left-0 right-0 z-[1000] py-3 px-4 backdrop-blur-[20px] bg-[rgba(17,3,12,0.95)] border-b border-[rgba(255,107,138,0.7)] md:py-[18px] md:px-10">
+        <div class="max-w-[1200px] mx-auto flex justify-between items-center relative">
+            <a href="index.html"
+                class="text-xl font-extrabold tracking-wide text-gradient-main no-underline cursor-pointer flex items-center gap-2 md:text-[1.8rem]">
+                <img src="logo.png" alt="Love Calculator Logo" class="h-8 w-auto object-contain md:h-10"
+                    onerror="this.style.display='none';">
+                <span class="text-base md:text-[1.8rem]">💕 LoveCalc</span>
+            </a>
+            <button class="flex flex-col cursor-pointer p-1 bg-transparent border-none z-[1001] md:hidden"
+                id="menuToggle" aria-label="Toggle menu">
+                <span
+                    class="w-[25px] h-[3px] bg-gradient-main my-[3px] transition-all duration-300 rounded-[3px]"></span>
+                <span
+                    class="w-[25px] h-[3px] bg-gradient-main my-[3px] transition-all duration-300 rounded-[3px]"></span>
+                <span
+                    class="w-[25px] h-[3px] bg-gradient-main my-[3px] transition-all duration-300 rounded-[3px]"></span>
+            </button>
+            <ul class="fixed top-0 -right-full w-[280px] h-screen bg-[rgba(17,3,12,0.98)] backdrop-blur-[30px] flex-col p-[80px_30px_30px] gap-0 transition-[right] duration-300 ease-in-out shadow-[-5px_0_20px_rgba(0,0,0,0.5)] border-l border-[rgba(255,107,138,0.7)] z-[1000] md:static md:flex md:w-auto md:h-auto md:bg-transparent md:backdrop-blur-0 md:flex-row md:gap-[30px] md:p-0 md:shadow-none md:border-l-0 md:list-none"
+                id="navLinks">
+                <li class="w-full border-b border-[rgba(255,107,138,0.2)] md:w-auto md:border-b-0"><a href="index.html"
+                        class="text-muted no-underline font-medium transition-all duration-300 relative py-[18px] block text-lg w-full md:py-[5px] md:w-auto">Calculator</a></li>
+                <li class="w-full border-b border-[rgba(255,107,138,0.2)] md:w-auto md:border-b-0"><a href="about.html"
+                        class="text-white no-underline font-medium transition-all duration-300 relative py-[18px] block text-lg w-full md:py-[5px] md:w-auto active">About</a></li>
+                <li class="w-full border-b border-[rgba(255,107,138,0.2)] md:w-auto md:border-b-0"><a href="disclaimer.html"
+                        class="text-muted no-underline font-medium transition-all duration-300 relative py-[18px] block text-lg w-full md:py-[5px] md:w-auto">Disclaimer</a>
+                </li>
+                <li class="w-full border-b border-[rgba(255,107,138,0.2)] md:w-auto md:border-b-0"><a href="privacy.html"
+                        class="text-muted no-underline font-medium transition-all duration-300 relative py-[18px] block text-lg w-full md:py-[5px] md:w-auto">Privacy</a>
+                </li>
+                <li class="w-full border-b border-[rgba(255,107,138,0.2)] md:w-auto md:border-b-0"><a href="policy.html"
+                        class="text-muted no-underline font-medium transition-all duration-300 relative py-[18px] block text-lg w-full md:py-[5px] md:w-auto">Policy</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div
+        class="relative z-[1] min-h-screen pt-24 px-4 pb-8 max-w-[1200px] mx-auto md:pt-[120px] md:px-5 md:pb-10">
+        <div class="max-w-[900px] mx-auto">
+            <div class="text-center mb-8 md:mb-[50px]">
+                <h1 class="text-2xl font-extrabold text-gradient-main mb-4 md:text-[3.5rem] md:mb-5">About Love
+                    Calculator</h1>
+            </div>
+
+            <div class="grid gap-5 md:gap-[30px]">
+                <div
+                    class="bg-gradient-to-br from-light-section to-[#ffd0dd] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
+                    <h3 class="text-lg mb-3 text-primary md:text-[1.8rem] md:mb-4">✨ How It Works</h3>
+                    <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] md:text-lg">
+                        The Mechanism
+                        Our Love Calculator determines whether two names are compatible using an advanced algorithm.
+                        Based on a mathematical analysis of
+                        the characters in both names, a unique compatibility score ranging from 51% to 100% is
+                        produced which are varying scores depending on the names.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-[rgba(255,227,234,0.95)] border-l-[4px] border-secondary backdrop-blur-[20px] rounded-[20px] p-6 border-t border-r border-b border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
+                    <h3 class="text-lg mb-3 text-primary md:text-[1.8rem] md:mb-4">🔬 The Algorithm</h3>
+                    <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] md:text-lg">
+                        The algorithm works by sanitizing both names (removing punctuation, converting to
+                        lowercase),
+                        then calculating a raw score based on the sum of all character codes. This raw score is
+                        processed
+                        through a modulo operation to ensure fairness, and then normalized to produce a final
+                        compatibility
+                        percentage between 51% and 100%. The calculation is completely deterministic - the same two
+                        names
+                        will always produce the same result.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-[rgba(255,207,221,0.95)] border-l-[4px] border-accent backdrop-blur-[20px] rounded-[20px] p-6 border-t border-r border-b border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
+                    <h3 class="text-lg mb-3 text-primary md:text-[1.8rem] md:mb-4">🔒 Privacy & Security</h3>
+                    <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] md:text-lg">
+                        Security and Privacy
+                        Your privacy is our top priority.
+                        All calculations are completed entirely within your browser; no data is transmitted to any
+                        servers.
+                        Your device stores your name entries and calculation history locally using browser storage.
+                        Everything remains in your browser, ensuring complete privacy and security.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-gradient-to-br from-light-section to-[#ffd0dd] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
+                    <h3 class="text-lg mb-3 text-primary md:text-[1.8rem] md:mb-4">💝 Score Ranges</h3>
+                    <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] md:text-lg">
+                        <strong class="text-primary">91-100%:</strong>Feels like a perfect match — this could turn
+                        into real love! 💑<br>
+                        <strong class="text-primary">81-90%:</strong> You two really click — something wonderful
+                        could grow here! 🌟<br>
+                        <strong class="text-primary">71-80%:</strong> A genuinely good match with lots of potential!
+                        💕<br>
+                        <strong class="text-primary">61-70%:</strong> A solid connection — definitely worth
+                        exploring more! 😊<br>
+                        <strong class="text-primary">51-60%:</strong>: Not bad at all — there's still room for
+                        things to develop! 👍
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-6 px-4 text-muted text-sm mt-8 border-t border-white/6 md:py-[30px] md:px-5 md:text-[0.95rem] md:mt-[50px]">
+        No data leaves your browser. Your privacy is protected.
+    </footer>
+
+    <script src="common.js"></script>
+</body>
+
+</html>
+
+

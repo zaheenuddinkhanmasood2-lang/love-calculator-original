@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <title>Privacy Policy - Love Calculator</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#b3002d',
+                        secondary: '#80001f',
+                        accent: '#ff6b8a',
+                        'light-section': '#ffe3ea',
+                        'bg-deep': '#11030a',
+                        'text-light': '#ffffff',
+                        'text-dark': '#111827',
+                        muted: '#fecdd3',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="font-sans bg-gradient-romantic text-text-light min-h-screen overflow-x-hidden relative">
+    <div class="fixed top-0 left-0 w-full h-full z-0 overflow-hidden">
+        <div class="absolute rounded-full blur-[80px] opacity-50 w-[500px] h-[500px] bg-[rgba(179,0,45,0.8)] -top-[200px] -left-[200px] animate-float"></div>
+        <div class="absolute rounded-full blur-[80px] opacity-50 w-[400px] h-[400px] bg-[rgba(255,107,138,0.7)] -bottom-[200px] -right-[200px] animate-float" style="animation-delay: 5s;"></div>
+        <div class="absolute rounded-full blur-[80px] opacity-50 w-[350px] h-[350px] bg-[rgba(255,227,234,0.7)] top-1/2 -right-[100px] animate-float" style="animation-delay: 10s;"></div>
+    </div>
+
+    <div class="hidden fixed top-0 left-0 w-full h-full bg-black/70 z-[999] opacity-0 transition-opacity duration-300 ease-in-out" id="menuOverlay"></div>
+    <nav class="fixed top-0 left-0 right-0 z-[1000] py-3 px-4 backdrop-blur-[20px] bg-[rgba(17,3,12,0.95)] border-b border-[rgba(255,107,138,0.7)] md:py-[18px] md:px-10">
+        <div class="max-w-[1200px] mx-auto flex justify-between items-center relative">
+            <div class="flex items-center">
+                <a href="index.html" class="flex items-center justify-center w-9 h-9 bg-transparent border border-[rgba(255,107,138,0.5)] rounded-full text-text-light no-underline text-xl transition-all duration-300 cursor-pointer mr-2.5 hover:bg-[rgba(255,107,138,0.2)] hover:border-[rgba(255,107,138,0.9)] hover:-translate-x-[3px] active:-translate-x-[1px] md:w-10 md:h-10 md:text-2xl md:mr-4" aria-label="Go back">←</a>
+                <a href="index.html" class="text-xl font-extrabold tracking-wide text-gradient-main no-underline flex items-center gap-2 md:text-[1.8rem]">💕 LoveCalc</a>
+            </div>
+            <button class="flex flex-col cursor-pointer p-1 bg-transparent border-none z-[1001] md:hidden" id="menuToggle" aria-label="Toggle menu">
+                <span class="w-[25px] h-[3px] bg-gradient-main my-[3px] transition-all duration-300 rounded-[3px]"></span>
+                <span class="w-[25px] h-[3px] bg-gradient-main my-[3px] transition-all duration-300 rounded-[3px]"></span>
+                <span class="w-[25px] h-[3px] bg-gradient-main my-[3px] transition-all duration-300 rounded-[3px]"></span>
+            </button>
+            <ul class="fixed top-0 -right-full w-[280px] h-screen bg-[rgba(17,3,12,0.98)] backdrop-blur-[30px] flex-col p-[80px_30px_30px] gap-0 transition-[right] duration-300 ease-in-out shadow-[-5px_0_20px_rgba(0,0,0,0.5)] border-l border-[rgba(255,107,138,0.7)] z-[1000] md:static md:flex md:w-auto md:h-auto md:bg-transparent md:backdrop-blur-0 md:flex-row md:gap-[30px] md:p-0 md:shadow-none md:border-l-0 md:list-none"
+                id="navLinks">
+                <li class="w-full border-b border-[rgba(255,107,138,0.2)] md:w-auto md:border-b-0"><a href="index.html" class="text-muted no-underline font-medium transition-all duration-300 relative py-[18px] block text-lg w-full md:py-[5px] md:w-auto">Calculator</a></li>
+                <li class="w-full border-b border-[rgba(255,107,138,0.2)] md:w-auto md:border-b-0"><a href="about.html" class="text-muted no-underline font-medium transition-all duration-300 relative py-[18px] block text-lg w-full md:py-[5px] md:w-auto">About</a></li>
+                <li class="w-full border-b border-[rgba(255,107,138,0.2)] md:w-auto md:border-b-0"><a href="disclaimer.html" class="text-muted no-underline font-medium transition-all duration-300 relative py-[18px] block text-lg w-full md:py-[5px] md:w-auto">Disclaimer</a></li>
+                <li class="w-full border-b border-[rgba(255,107,138,0.2)] md:w-auto md:border-b-0"><a href="privacy.html" class="text-white no-underline font-medium transition-all duration-300 relative py-[18px] block text-lg w-full md:py-[5px] md:w-auto active">Privacy</a></li>
+                <li class="w-full border-b border-[rgba(255,107,138,0.2)] md:w-auto md:border-b-0"><a href="policy.html" class="text-muted no-underline font-medium transition-all duration-300 relative py-[18px] block text-lg w-full md:py-[5px] md:w-auto">Policy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="relative z-[1] min-h-screen pt-24 px-4 pb-8 max-w-[1200px] mx-auto md:pt-[120px] md:px-5 md:pb-10">
+        <div class="max-w-[900px] mx-auto">
+            <div class="text-center mb-8 md:mb-[50px]">
+                <h1 class="text-2xl font-extrabold text-gradient-main mb-4 md:text-[3.5rem] md:mb-5">Privacy Policy</h1>
+            </div>
+
+            <div class="grid gap-5 md:gap-[30px]">
+                <div class="bg-gradient-to-br from-light-section to-[#ffd0dd] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
+                    <h3 class="text-lg mb-3 text-primary md:text-[1.8rem] md:mb-4">🔒 Data Collection and Storage</h3>
+                    <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] md:text-lg">
+                        The Love Calculator operates entirely within your web browser. We do not collect, transmit, or
+                        store any personal information, names, or calculation data on our servers. All calculations are
+                        performed locally on your device using JavaScript, ensuring that your data never leaves your
+                        computer or mobile device.
+                    </p>
+                </div>
+
+                <div class="bg-[rgba(255,227,234,0.95)] border-l-[4px] border-secondary backdrop-blur-[20px] rounded-[20px] p-6 border-t border-r border-b border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
+                    <h3 class="text-lg mb-3 text-primary md:text-[1.8rem] md:mb-4">💾 Local Storage</h3>
+                    <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] md:text-lg">
+                        For your convenience, the calculator may store your calculation history using 
+                        the local storage feature of your browser. 
+                        This information is never sent to an external server;
+                        it is only kept on your device. You have complete control over this data, 
+                        and you can delete it whenever you want using the calculator's clear history feature
+                        or your browser's settings.
+                    </p>
+                </div>
+
+                <div class="bg-[rgba(255,207,221,0.95)] border-l-[4px] border-accent backdrop-blur-[20px] rounded-[20px] p-6 border-t border-r border-b border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
+                    <h3 class="text-lg mb-3 text-primary md:text-[1.8rem] md:mb-4">🌐 Information</h3>
+                    <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] md:text-lg">
+                        Like most websites,
+                        our server may automatically collect common technical
+                        information such as your IP address, device type, browser type, and
+                        pages viewed. This data is only utilized for website analytics and 
+                        enhancement and cannot be used to personally identify you. This technical data
+                        is not combined with any personal information you input into the calculator.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-light-section to-[#ffd0dd] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
+                    <h3 class="text-lg mb-3 text-primary md:text-[1.8rem] md:mb-4">🍪 Cookies and Tracking</h3>
+                    <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] md:text-lg">
+                        Cookies and related technologies may be used on this website to improve your browsing experience and track website traffic.  
+                        These cookies are only used for functional purposes, like remembering your preferences, 
+                        and do not contain any personal information.
+                        Your browser's preferences allow you to manage cookie settings.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-light-section to-[#ffd0dd] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
+                    <h3 class="text-lg mb-3 text-primary md:text-[1.8rem] md:mb-4">External Services 🔐</h3>
+                    <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] md:text-lg">
+                        You can be sure that no third parties will receive your personal information.   
+                        Our calculator is completely independent and has no connections to social media, advertising agencies,
+                        or information providers.   
+                        Your privacy will be protected throughout, so you can use the tool with total confidence.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-light-section to-[#ffd0dd] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
+                    <h3 class="text-lg mb-3 text-primary md:text-[1.8rem] md:mb-4">👤 Your Rights</h3>
+                    <ul class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] ml-5 mt-2.5 md:text-lg">
+                        <li class="mb-2.5">You are in control of your identity and you have the right to an anonymous use of the
+                            calculator.</li>
+                        <li class="mb-2.5">If you want, you can wipe out all your calculated history anytime.</li>
+                        <li class="mb-2.5">If saving the history is not your thing, then you can turn off local storage through your
+                            browser's settings.</li>
+                        <li class="mb-2.5">You can always use the calculator in the private/incognito mode so that no one knows you are
+                            there.</li>
+                        <li class="mb-2.5">No sign-up or registration process is necessary to access the service.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gradient-to-br from-light-section to-[#ffd0dd] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
+                    <h3 class="text-lg mb-3 text-primary md:text-[1.8rem] md:mb-4">📅 Policy Modifications</h3>
+                    <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] md:text-lg">
+                        We periodically update this privacy statement to reflect changes in our business practices and to comply 
+                        with legal requirements. To understand how we're protecting your information,
+                        we encourage you to check this page frequently. 
+                        You accept the updated policy if you keep using the calculator after any updates go into effect.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-6 px-4 text-muted text-sm mt-8 border-t border-white/6 md:py-[30px] md:px-5 md:text-[0.95rem] md:mt-[50px]">
+        No data leaves your browser. Your privacy is protected.
+    </footer>
+
+    <script src="common.js"></script>
+</body>
+
+</html>

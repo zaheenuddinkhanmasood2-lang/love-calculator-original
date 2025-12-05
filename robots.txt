@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://mylovecalculate.com/sitemap.xml
+
+# Disallow generator tool
+Disallow: /create-favicons.html
+

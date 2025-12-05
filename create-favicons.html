@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favicon Generator</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans p-5 bg-gray-100">
+    <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-4">Love Calculator Favicon Generator</h1>
+        <p class="mb-4">Click the buttons below to generate and download favicon files:</p>
+        
+        <canvas id="favicon16" width="16" height="16" class="border border-gray-300 m-2.5 bg-[#11030a]"></canvas>
+        <canvas id="favicon32" width="32" height="32" class="border border-gray-300 m-2.5 bg-[#11030a]"></canvas>
+        <canvas id="favicon180" width="180" height="180" class="border border-gray-300 m-2.5 bg-[#11030a]"></canvas>
+        
+        <div>
+            <button onclick="generateFavicons()" class="bg-[#b3002d] text-white border-none py-2.5 px-5 rounded cursor-pointer m-1.5 hover:bg-[#ff6b8a] transition-colors">Generate Favicons</button>
+            <button onclick="downloadFavicon(16)" class="bg-[#b3002d] text-white border-none py-2.5 px-5 rounded cursor-pointer m-1.5 hover:bg-[#ff6b8a] transition-colors">Download 16x16</button>
+            <button onclick="downloadFavicon(32)" class="bg-[#b3002d] text-white border-none py-2.5 px-5 rounded cursor-pointer m-1.5 hover:bg-[#ff6b8a] transition-colors">Download 32x32</button>
+            <button onclick="downloadFavicon(180)" class="bg-[#b3002d] text-white border-none py-2.5 px-5 rounded cursor-pointer m-1.5 hover:bg-[#ff6b8a] transition-colors">Download 180x180</button>
+        </div>
+    </div>
+
+    <script>
+        function drawHeart(ctx, size, x, y) {
+            const scale = size / 100;
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.scale(scale, scale);
+            
+            // Create gradient
+            const gradient = ctx.createLinearGradient(0, 0, 100, 100);
+            gradient.addColorStop(0, '#b3002d');
+            gradient.addColorStop(0.5, '#ff6b8a');
+            gradient.addColorStop(1, '#ffe3ea');
+            
+            // Draw heart
+            ctx.beginPath();
+            ctx.moveTo(50, 30);
+            ctx.bezierCurveTo(45, 20, 35, 20, 35, 30);
+            ctx.bezierCurveTo(35, 40, 50, 55, 50, 55);
+            ctx.bezierCurveTo(50, 55, 65, 40, 65, 30);
+            ctx.bezierCurveTo(65, 20, 55, 20, 50, 30);
+            ctx.closePath();
+            ctx.fillStyle = gradient;
+            ctx.fill();
+            ctx.strokeStyle = '#ff6b8a';
+            ctx.lineWidth = 2 / scale;
+            ctx.stroke();
+        }
+
+        function generateFavicons() {
+            const sizes = [16, 32, 180];
+            sizes.forEach(size => {
+                const canvas = document.getElementById(`favicon${size}`);
+                const ctx = canvas.getContext('2d');
+                
+                // Fill background
+                ctx.fillStyle = '#11030a';
+                ctx.fillRect(0, 0, size, size);
+                
+                // Draw heart in center
+                drawHeart(ctx, size * 0.7, size / 2, size / 2);
+            });
+        }
+
+        function downloadFavicon(size) {
+            const canvas = document.getElementById(`favicon${size}`);
+            const link = document.createElement('a');
+            link.download = `favicon-${size}x${size}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        // Auto-generate on load
+        window.onload = generateFavicons;
+    </script>
+</body>
+</html>
+
