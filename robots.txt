@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://mylovecalculate.com/sitemap.xml
+Sitemap: https://lovecalculatorlai.vercel.app/sitemap.xml
 
 # Disallow generator tool
 Disallow: /create-favicons.html
