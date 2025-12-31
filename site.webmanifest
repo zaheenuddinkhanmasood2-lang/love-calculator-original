@@ -1,7 +1,7 @@
 {
-    "name": "Love Calculator & Love Tester",
-    "short_name": "LoveCalc",
-    "description": "Free online Love Calculator and Love Tester to calculate compatibility percentage between two names",
+    "name": "Love Checker & Love Tester",
+    "short_name": "LoveChecker",
+    "description": "Powered by smart algorithms, this love checker AI analyzes your connection. Perform a love check now to see if it's true love. Try the #1 love checker today.",
     "icons": [
         {
             "src": "favicon-16x16.png",

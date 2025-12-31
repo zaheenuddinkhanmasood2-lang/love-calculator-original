@@ -170,4 +170,92 @@
     animation: pulse-ring 2s infinite;
 }
 
+/* FAQ Accordion Styles */
+.faq-item {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.faq-item:hover {
+    box-shadow: 0 6px 20px rgba(255, 107, 138, 0.4);
+}
+
+.faq-question {
+    cursor: pointer;
+    user-select: none;
+}
+
+.faq-question:hover {
+    background-color: rgba(255, 107, 138, 0.1);
+}
+
+.faq-question:focus {
+    outline: none;
+    background-color: rgba(255, 107, 138, 0.15);
+}
+
+.faq-icon {
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-left: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 107, 138, 0.2);
+    transition: all 0.3s ease;
+}
+
+.faq-question[aria-expanded="true"] .faq-icon {
+    background-color: rgba(255, 107, 138, 0.4);
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.faq-answer > div {
+    border-top: 1px solid rgba(255, 107, 138, 0.3);
+    padding-top: 1rem;
+}
+
+/* Navigation fixes */
+nav ul#navLinks {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+nav ul#navLinks li a {
+    white-space: nowrap;
+}
+
+/* Responsive navigation font size for smaller screens */
+@media (max-width: 1024px) and (min-width: 768px) {
+    nav ul#navLinks li a {
+        font-size: 0.875rem;
+    }
+}
+
+/* Heading alignment fixes */
+h1.text-gradient-main {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ensure main content containers are properly centered */
+.max-w-\[900px\] {
+    width: 100%;
+    max-width: 900px;
+}
+
+.max-w-\[1200px\] {
+    width: 100%;
+    max-width: 1200px;
+}
+
 

@@ -28,7 +28,7 @@ const feedbackLibrary = {
         },
         {
             title: "Glitch in the Matrix 🕳️",
-            line: "The algorithm checked twice and still whispered "nah."",
+            line: "The algorithm checked twice and still whispered \"nah.\"",
             reference: "Even the stars asked for a rain check."
         },
         {
@@ -329,7 +329,7 @@ function escapeHtml(text) {
 }
 
 // Wait for DOM to be ready
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // DOM Elements
     const form = document.getElementById('loveForm');
     if (!form) return; // Exit if form doesn't exist (not on calculator page)
@@ -421,6 +421,48 @@ document.addEventListener('DOMContentLoaded', function() {
         if (event.key === 'Enter') {
             event.preventDefault();
             form.dispatchEvent(new Event('submit'));
+        }
+    });
+
+    // FAQ Accordion Functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+
+        if (question && answer && icon) {
+            question.addEventListener('click', function () {
+                const isExpanded = question.getAttribute('aria-expanded') === 'true';
+
+                // Close all other FAQ items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        const otherQuestion = otherItem.querySelector('.faq-question');
+                        const otherAnswer = otherItem.querySelector('.faq-answer');
+                        const otherIcon = otherItem.querySelector('.faq-icon');
+                        if (otherQuestion && otherAnswer && otherIcon) {
+                            otherQuestion.setAttribute('aria-expanded', 'false');
+                            otherAnswer.style.maxHeight = null;
+                            otherIcon.textContent = '+';
+                            otherIcon.style.transform = 'rotate(0deg)';
+                        }
+                    }
+                });
+
+                // Toggle current item
+                if (isExpanded) {
+                    question.setAttribute('aria-expanded', 'false');
+                    answer.style.maxHeight = null;
+                    icon.textContent = '+';
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    question.setAttribute('aria-expanded', 'true');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.textContent = '−';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
         }
     });
 });
