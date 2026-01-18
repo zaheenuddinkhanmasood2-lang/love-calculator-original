@@ -18,6 +18,7 @@
     <meta name="revisit-after" content="7 days">
     <meta name="google-site-verification" content="BR9GYpW3XExXMYLK14nZlC55PH890IB_Pq8zZOIuhgo" />
     <link rel="sitemap" type="application/xml" href="sitemap.xml">
+    <link rel="canonical" href="https://lovecheckerapp.vercel.app/" id="canonical-link">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -52,14 +53,14 @@
     <link rel="manifest" href="site.webmanifest">
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FN75QR0J61"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FN75QR0J61"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-FN75QR0J61');
-</script>
+        gtag('config', 'G-FN75QR0J61');
+    </script>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -122,24 +123,10 @@
       "@type": "FAQPage",
       "mainEntity": [{
         "@type": "Question",
-        "name": "What is a Love Calculator?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A Love Calculator is a fun online tool that calculates compatibility percentage between two people based on their names. It's also known as a Love Tester and provides a love meter score showing how well-suited two names are to each other."
-        }
-      },{
-        "@type": "Question",
         "name": "How does the Love Checker AI work?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "The Love Checker AI uses advanced name analysis and compatibility algorithms to calculate relationship compatibility. It processes the characters in both names, converts them to numerical values, and applies sophisticated pattern matching techniques to determine how well two names align. The algorithm analyzes letter frequencies, character patterns, and compatibility metrics to generate a comprehensive love check score that reflects the potential connection between two individuals."
-        }
-      },{
-        "@type": "Question",
-        "name": "Is the Love Calculator free?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, our Love Calculator and Love Tester is completely free to use. No registration, no payment required. Just enter two names and get instant compatibility results."
         }
       },{
         "@type": "Question",
@@ -216,55 +203,54 @@
     <div class="relative z-[1] h-screen flex items-center justify-center px-4 max-w-[1200px] mx-auto md:px-5">
         <!-- Main Page - Calculator -->
         <div class="animate-fadeIn w-full max-w-[700px] mx-auto relative">
-                <h1
-                    class="text-center text-3xl font-extrabold mb-4 text-gradient-main animate-pulse md:text-6xl md:mb-5">
-                    Love Checker AI</h1>
-                <p class="text-center text-base text-muted mb-8 px-2 md:text-xl md:mb-[50px] md:px-0">Perform a free
-                    love check to discover compatibility between you and your loved one</p>
+            <h1 class="text-center text-3xl font-extrabold mb-4 text-gradient-main animate-pulse md:text-6xl md:mb-5">
+                Love Checker AI - Free Love Check & Compatibility Test</h1>
+            <p class="text-center text-base text-muted mb-8 px-2 md:text-xl md:mb-[50px] md:px-0">Use our advanced Love
+                Checker AI to perform a free love check and discover your compatibility score. The ultimate love tester
+                for couples seeking compatibility test results</p>
 
-                <div
-                    class="bg-[rgba(17,3,12,0.9)] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_24px_60px_rgba(0,0,0,0.8),0_0_0_1px_rgba(255,107,138,0.7)] transition-all duration-300 hover:-translate-y-[5px] hover:shadow-[0_28px_70px_rgba(0,0,0,0.95),0_0_40px_rgba(255,107,138,0.8)] md:p-[50px] md:rounded-[30px]">
-                    <form id="loveForm" role="form" aria-label="Love Checker AI - Start Love Check">
-                        <div class="mb-6 md:mb-[30px]">
-                            <label for="name1"
-                                class="block text-base font-semibold mb-2 text-text-light md:text-lg md:mb-3">First
-                                Name</label>
-                            <input type="text" id="name1"
-                                class="w-full py-3 px-4 bg-[rgba(17,3,12,0.96)] border border-[rgba(255,107,138,0.7)] rounded-[15px] text-text-light text-base font-sans transition-all duration-300 focus:outline-none focus:border-[rgba(255,107,138,0.95)] focus:bg-[#270513] focus:shadow-[0_0_0_1px_rgba(255,107,138,0.8),0_0_24px_rgba(255,107,138,0.7)] placeholder:text-[rgba(254,205,211,0.8)] md:py-[18px] md:px-6 md:text-lg"
-                                placeholder="Enter first name" aria-label="First person's name" aria-required="true"
-                                autocomplete="off">
-                        </div>
-
-                        <div class="mb-6 md:mb-[30px]">
-                            <label for="name2"
-                                class="block text-base font-semibold mb-2 text-text-light md:text-lg md:mb-3">Second
-                                Name</label>
-                            <input type="text" id="name2"
-                                class="w-full py-3 px-4 bg-[rgba(17,3,12,0.96)] border border-[rgba(255,107,138,0.7)] rounded-[15px] text-text-light text-base font-sans transition-all duration-300 focus:outline-none focus:border-[rgba(255,107,138,0.95)] focus:bg-[#270513] focus:shadow-[0_0_0_1px_rgba(255,107,138,0.8),0_0_24px_rgba(255,107,138,0.7)] placeholder:text-[rgba(254,205,211,0.8)] md:py-[18px] md:px-6 md:text-lg"
-                                placeholder="Enter second name" aria-label="Second person's name" aria-required="true"
-                                autocomplete="off">
-                        </div>
-
-                        <div class="text-[#ff6b6b] mt-4 p-3 bg-[rgba(255,107,107,0.1)] rounded-[10px] border-l-[3px] border-[#ff6b6b] hidden"
-                            id="errorMessage" role="alert" aria-live="polite"></div>
-
-                        <button type="submit"
-                            class="calculate-btn w-full py-3 bg-gradient-main border-none rounded-[15px] text-white text-base font-bold font-sans cursor-pointer transition-all duration-300 relative overflow-hidden mt-2.5 shadow-[0_0_0_1px_rgba(255,107,138,0.8),0_12px_30px_rgba(0,0,0,0.8)] hover:-translate-y-[3px] hover:shadow-[0_0_0_1px_rgba(255,107,138,1),0_0_35px_rgba(255,107,138,0.9),0_16px_40px_rgba(0,0,0,0.95)] active:-translate-y-[1px] md:py-[18px] md:text-xl"
-                            id="calculateBtn" aria-label="Start Love Check">
-                            Start Love Check
-                        </button>
-                    </form>
-
-                    <div id="result" class="mt-8 text-center hidden md:mt-10" role="status" aria-live="polite">
-                        <div class="w-[180px] h-[180px] mx-auto mb-6 rounded-full bg-gradient-main flex items-center justify-center text-5xl font-extrabold text-white relative animate-scaleIn shadow-[0_0_0_1px_rgba(255,107,138,0.9),0_0_40px_rgba(255,107,138,0.9),0_18px_55px_rgba(0,0,0,0.95)] md:w-[250px] md:h-[250px] md:text-7xl md:mb-[30px]"
-                            id="scoreDisplay"></div>
-                        <div class="text-xl font-semibold mb-3 text-gradient-main md:text-2xl md:mb-4"
-                            id="messageDisplay">
-                        </div>
-                        <div class="text-base text-white/70 leading-relaxed whitespace-pre-line px-2 md:text-lg md:px-0"
-                            id="descriptionDisplay">                        </div>
+            <div
+                class="bg-[rgba(17,3,12,0.9)] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_24px_60px_rgba(0,0,0,0.8),0_0_0_1px_rgba(255,107,138,0.7)] transition-all duration-300 hover:-translate-y-[5px] hover:shadow-[0_28px_70px_rgba(0,0,0,0.95),0_0_40px_rgba(255,107,138,0.8)] md:p-[50px] md:rounded-[30px]">
+                <form id="loveForm" role="form" aria-label="Love Checker AI - Start Love Check">
+                    <div class="mb-6 md:mb-[30px]">
+                        <label for="name1"
+                            class="block text-base font-semibold mb-2 text-text-light md:text-lg md:mb-3">First
+                            Name</label>
+                        <input type="text" id="name1"
+                            class="w-full py-3 px-4 bg-[rgba(17,3,12,0.96)] border border-[rgba(255,107,138,0.7)] rounded-[15px] text-text-light text-base font-sans transition-all duration-300 focus:outline-none focus:border-[rgba(255,107,138,0.95)] focus:bg-[#270513] focus:shadow-[0_0_0_1px_rgba(255,107,138,0.8),0_0_24px_rgba(255,107,138,0.7)] placeholder:text-[rgba(254,205,211,0.8)] md:py-[18px] md:px-6 md:text-lg"
+                            placeholder="Enter first name" aria-label="First person's name" aria-required="true"
+                            autocomplete="off">
                     </div>
+
+                    <div class="mb-6 md:mb-[30px]">
+                        <label for="name2"
+                            class="block text-base font-semibold mb-2 text-text-light md:text-lg md:mb-3">Second
+                            Name</label>
+                        <input type="text" id="name2"
+                            class="w-full py-3 px-4 bg-[rgba(17,3,12,0.96)] border border-[rgba(255,107,138,0.7)] rounded-[15px] text-text-light text-base font-sans transition-all duration-300 focus:outline-none focus:border-[rgba(255,107,138,0.95)] focus:bg-[#270513] focus:shadow-[0_0_0_1px_rgba(255,107,138,0.8),0_0_24px_rgba(255,107,138,0.7)] placeholder:text-[rgba(254,205,211,0.8)] md:py-[18px] md:px-6 md:text-lg"
+                            placeholder="Enter second name" aria-label="Second person's name" aria-required="true"
+                            autocomplete="off">
+                    </div>
+
+                    <div class="text-[#ff6b6b] mt-4 p-3 bg-[rgba(255,107,107,0.1)] rounded-[10px] border-l-[3px] border-[#ff6b6b] hidden"
+                        id="errorMessage" role="alert" aria-live="polite"></div>
+
+                    <button type="submit"
+                        class="calculate-btn w-full py-3 bg-gradient-main border-none rounded-[15px] text-white text-base font-bold font-sans cursor-pointer transition-all duration-300 relative overflow-hidden mt-2.5 shadow-[0_0_0_1px_rgba(255,107,138,0.8),0_12px_30px_rgba(0,0,0,0.8)] hover:-translate-y-[3px] hover:shadow-[0_0_0_1px_rgba(255,107,138,1),0_0_35px_rgba(255,107,138,0.9),0_16px_40px_rgba(0,0,0,0.95)] active:-translate-y-[1px] md:py-[18px] md:text-xl"
+                        id="calculateBtn" aria-label="Start Love Check">
+                        Start Love Check
+                    </button>
+                </form>
+
+                <div id="result" class="mt-8 text-center hidden md:mt-10" role="status" aria-live="polite">
+                    <div class="w-[180px] h-[180px] mx-auto mb-6 rounded-full bg-gradient-main flex items-center justify-center text-5xl font-extrabold text-white relative animate-scaleIn shadow-[0_0_0_1px_rgba(255,107,138,0.9),0_0_40px_rgba(255,107,138,0.9),0_18px_55px_rgba(0,0,0,0.95)] md:w-[250px] md:h-[250px] md:text-7xl md:mb-[30px]"
+                        id="scoreDisplay"></div>
+                    <div class="text-xl font-semibold mb-3 text-gradient-main md:text-2xl md:mb-4" id="messageDisplay">
+                    </div>
+                    <div class="text-base text-white/70 leading-relaxed whitespace-pre-line px-2 md:text-lg md:px-0"
+                        id="descriptionDisplay"> </div>
                 </div>
+            </div>
         </div>
     </div>
 
@@ -273,130 +259,126 @@
         <div class="max-w-[700px] mx-auto">
             <!-- Value-Add Section: About Love Checker -->
             <section id="about-love-checker" class="max-w-[900px] mx-auto my-12 md:my-20">
-                    <!-- FAQ Section with Accordions -->
-                    <div class="mb-12 md:mb-16">
-                        <h2 class="text-3xl font-extrabold mb-8 text-center text-gradient-main md:text-4xl md:mb-10">
-                            Love Check - Frequently Asked Questions
-                        </h2>
-                        <div class="space-y-4">
-                            <!-- FAQ Item 1 -->
-                            <div
-                                class="faq-item bg-[rgba(17,3,12,0.9)] backdrop-blur-[20px] rounded-[15px] border border-[rgba(255,107,138,0.7)] overflow-hidden transition-all duration-300 hover:border-[rgba(255,107,138,0.9)]">
-                                <button
-                                    class="faq-question w-full text-left py-4 px-6 flex justify-between items-center text-text-light font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-accent rounded-[15px] md:py-5 md:px-8 md:text-xl"
-                                    aria-expanded="false">
-                                    <span>How does the Love Checker AI work?</span>
-                                    <span
-                                        class="faq-icon text-accent text-2xl transition-transform duration-300">+</span>
-                                </button>
-                                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-                                    <div
-                                        class="px-6 pb-4 text-text-light/80 leading-relaxed md:px-8 md:pb-5 md:text-lg">
-                                        The Love Checker AI uses advanced name analysis and compatibility algorithms to
-                                        calculate relationship compatibility. It processes the characters in both names,
-                                        converts them to numerical values, and applies sophisticated pattern matching
-                                        techniques to determine how well two names align. The algorithm analyzes letter
-                                        frequencies, character patterns, and compatibility metrics to generate a
-                                        comprehensive love check score that reflects the potential connection between
-                                        two individuals.
-                                    </div>
+                <!-- FAQ Section with Accordions -->
+                <div class="mb-12 md:mb-16">
+                    <h2 class="text-3xl font-extrabold mb-8 text-center text-gradient-main md:text-4xl md:mb-10">
+                        Love Checker AI & Compatibility Test - Frequently Asked Questions
+                    </h2>
+                    <div class="space-y-4">
+                        <!-- FAQ Item 1 -->
+                        <div
+                            class="faq-item bg-[rgba(17,3,12,0.9)] backdrop-blur-[20px] rounded-[15px] border border-[rgba(255,107,138,0.7)] overflow-hidden transition-all duration-300 hover:border-[rgba(255,107,138,0.9)]">
+                            <button
+                                class="faq-question w-full text-left py-4 px-6 flex justify-between items-center text-text-light font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-accent rounded-[15px] md:py-5 md:px-8 md:text-xl"
+                                aria-expanded="false">
+                                <span>How does the Love Checker AI work?</span>
+                                <span class="faq-icon text-accent text-2xl transition-transform duration-300">+</span>
+                            </button>
+                            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                                <div class="px-6 pb-4 text-text-light/80 leading-relaxed md:px-8 md:pb-5 md:text-lg">
+                                    The Love Checker AI uses advanced name analysis and compatibility algorithms to
+                                    calculate relationship compatibility. It processes the characters in both names,
+                                    converts them to numerical values, and applies sophisticated pattern matching
+                                    techniques to determine how well two names align. The algorithm analyzes letter
+                                    frequencies, character patterns, and compatibility metrics to generate a
+                                    comprehensive love check score that reflects the potential connection between
+                                    two individuals.
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- FAQ Item 2 -->
-                            <div
-                                class="faq-item bg-[rgba(17,3,12,0.9)] backdrop-blur-[20px] rounded-[15px] border border-[rgba(255,107,138,0.7)] overflow-hidden transition-all duration-300 hover:border-[rgba(255,107,138,0.9)]">
-                                <button
-                                    class="faq-question w-full text-left py-4 px-6 flex justify-between items-center text-text-light font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-accent rounded-[15px] md:py-5 md:px-8 md:text-xl"
-                                    aria-expanded="false">
-                                    <span>Is this Love Check accurate?</span>
-                                    <span
-                                        class="faq-icon text-accent text-2xl transition-transform duration-300">+</span>
-                                </button>
-                                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-                                    <div
-                                        class="px-6 pb-4 text-text-light/80 leading-relaxed md:px-8 md:pb-5 md:text-lg">
-                                        While our Love Checker AI is designed for entertainment purposes, it utilizes
-                                        advanced pattern matching algorithms and compatibility analysis techniques. The
-                                        love check results are based on mathematical calculations and name compatibility
-                                        patterns. However, it's important to remember that real relationships are
-                                        complex and influenced by many factors beyond names. Use the love checker as a
-                                        fun tool to explore compatibility, but always trust your own feelings and
-                                        experiences in real relationships.
-                                    </div>
+                        <!-- FAQ Item 2 -->
+                        <div
+                            class="faq-item bg-[rgba(17,3,12,0.9)] backdrop-blur-[20px] rounded-[15px] border border-[rgba(255,107,138,0.7)] overflow-hidden transition-all duration-300 hover:border-[rgba(255,107,138,0.9)]">
+                            <button
+                                class="faq-question w-full text-left py-4 px-6 flex justify-between items-center text-text-light font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-accent rounded-[15px] md:py-5 md:px-8 md:text-xl"
+                                aria-expanded="false">
+                                <span>Is this Love Check accurate?</span>
+                                <span class="faq-icon text-accent text-2xl transition-transform duration-300">+</span>
+                            </button>
+                            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                                <div class="px-6 pb-4 text-text-light/80 leading-relaxed md:px-8 md:pb-5 md:text-lg">
+                                    While our Love Checker AI is designed for entertainment purposes, it utilizes
+                                    advanced pattern matching algorithms and compatibility analysis techniques. The
+                                    love check results are based on mathematical calculations and name compatibility
+                                    patterns. However, it's important to remember that real relationships are
+                                    complex and influenced by many factors beyond names. Use the love checker as a
+                                    fun tool to explore compatibility, but always trust your own feelings and
+                                    experiences in real relationships.
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- FAQ Item 3 -->
-                            <div
-                                class="faq-item bg-[rgba(17,3,12,0.9)] backdrop-blur-[20px] rounded-[15px] border border-[rgba(255,107,138,0.7)] overflow-hidden transition-all duration-300 hover:border-[rgba(255,107,138,0.9)]">
-                                <button
-                                    class="faq-question w-full text-left py-4 px-6 flex justify-between items-center text-text-light font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-accent rounded-[15px] md:py-5 md:px-8 md:text-xl"
-                                    aria-expanded="false">
-                                    <span>Is my data safe with Love Checker?</span>
-                                    <span
-                                        class="faq-icon text-accent text-2xl transition-transform duration-300">+</span>
-                                </button>
-                                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-                                    <div
-                                        class="px-6 pb-4 text-text-light/80 leading-relaxed md:px-8 md:pb-5 md:text-lg">
-                                        Yes, your data is completely safe with our Love Checker AI. We do not store
-                                        personal names or results. All calculations are performed locally in your
-                                        browser, meaning your information never leaves your device. We have a strict
-                                        privacy-first approach: no data collection, no tracking, and no storage of any
-                                        personal information. Your love check results remain private and are only
-                                        visible to you during your session.
-                                    </div>
+                        <!-- FAQ Item 3 -->
+                        <div
+                            class="faq-item bg-[rgba(17,3,12,0.9)] backdrop-blur-[20px] rounded-[15px] border border-[rgba(255,107,138,0.7)] overflow-hidden transition-all duration-300 hover:border-[rgba(255,107,138,0.9)]">
+                            <button
+                                class="faq-question w-full text-left py-4 px-6 flex justify-between items-center text-text-light font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-accent rounded-[15px] md:py-5 md:px-8 md:text-xl"
+                                aria-expanded="false">
+                                <span>Is my data safe with Love Checker?</span>
+                                <span class="faq-icon text-accent text-2xl transition-transform duration-300">+</span>
+                            </button>
+                            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                                <div class="px-6 pb-4 text-text-light/80 leading-relaxed md:px-8 md:pb-5 md:text-lg">
+                                    Yes, your data is completely safe with our Love Checker AI. We do not store
+                                    personal names or results. All calculations are performed locally in your
+                                    browser, meaning your information never leaves your device. We have a strict
+                                    privacy-first approach: no data collection, no tracking, and no storage of any
+                                    personal information. Your love check results remain private and are only
+                                    visible to you during your session.
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <div class="max-w-[900px] mx-auto my-12 grid gap-5 md:my-20 md:gap-6">
-                    <div
-                        class="bg-gradient-to-br from-light-section to-[#ffd0dd] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-9 md:rounded-[25px]">
-                        <h2 class="text-xl mb-3 text-primary md:text-2xl md:mb-4">💕 What is a Love Checker?</h2>
-                        <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] mb-3 last:mb-0 md:text-[1.05rem]">
-                            A tool called Love Calculator is used to determine whether two people are compatible for
-                            love.
-                            Are you interested in the chemistry between a friend or your crush? Then you need this tool.
-                            It will reveal the mysteries of your compatibility. You can find a percentage score that
-                            shows
-                            how well-suited you are to each other simply by inputting your names! A insight into the
-                            realm
-                            of relationships will be provided by the love meter!
-                        </p>
-                        <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] mb-3 last:mb-0 md:text-[1.05rem]">
-                            The amusing web application "Love Calculator" uses the names of two people to determine
-                            whether
-                            they are compatible. The tool will produce a percentage score once you enter the names. It
-                            shows
-                            how deeply a couple is in love. A lot of people like to use it for entertainment, curiosity,
-                            or
-                            simply to start a conversation.
-                        </p>
-                    </div>
+            <div class="max-w-[900px] mx-auto my-12 grid gap-5 md:my-20 md:gap-6">
+                <div
+                    class="bg-gradient-to-br from-light-section to-[#ffd0dd] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-9 md:rounded-[25px]">
+                    <h2 class="text-xl mb-3 text-primary md:text-2xl md:mb-4">💕 What is a Love Checker AI & Love
+                        Tester?</h2>
+                    <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] mb-3 last:mb-0 md:text-[1.05rem]">
+                        A <strong>Love Checker AI</strong> is an advanced online tool used to perform a love check and
+                        determine whether two people are compatible for love. Also known as a love tester or
+                        compatibility test, this tool uses intelligent algorithms to analyze name compatibility. Are you
+                        interested in the chemistry between a friend or your crush? Then you need this love tester. It
+                        will reveal the mysteries of your compatibility. You can find a percentage score that shows how
+                        well-suited you are to each other simply by inputting your names! Our love tester provides an
+                        insight into the realm of relationships with accurate compatibility analysis!
+                    </p>
+                    <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] mb-3 last:mb-0 md:text-[1.05rem]">
+                        Our <strong>Love Checker AI</strong> and compatibility test tool uses the names of two people to
+                        perform an instant love check. This free love tester will produce a compatibility percentage
+                        score once you enter the names. The love check results show how deeply a couple might connect. A
+                        lot of people like to use this love tester for entertainment, curiosity, or simply to start a
+                        conversation about their relationship compatibility.
+                    </p>
+                </div>
 
-                    <div
-                        class="bg-gradient-to-br from-light-section to-[#ffd0dd] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-9 md:rounded-[25px]">
-                        <h2 class="text-xl mb-3 text-primary md:text-2xl md:mb-4">📝 How to Use Love Checker AI</h2>
-                        <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] mb-3 last:mb-0 md:text-[1.05rem]">
-                            <strong class="text-primary">Step-by-step guide to use love calculator online</strong>
-                        </p>
-                        <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] mb-3 last:mb-0 md:text-[1.05rem]">
-                            Here is how to use true love calculator:</p>
-                        <ol class="ml-5 mt-2.5 text-sm leading-relaxed text-[rgba(17,24,39,0.85)] md:text-[1.05rem]">
-                            <li class="mb-2">Go to the calculator section.</li>
-                            <li class="mb-2">Enter your name and your crush name into two different boxes.</li>
-                            <li class="mb-2">Click the Calculate button.</li>
-                            <li class="mb-2">View Results. The calculator will display a percentage score as well
-                                as a brief interpretation of what the score means.</li>
-                        </ol>
-                    </div>
+                <div
+                    class="bg-gradient-to-br from-light-section to-[#ffd0dd] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-9 md:rounded-[25px]">
+                    <h2 class="text-xl mb-3 text-primary md:text-2xl md:mb-4">📝 How to Use Love Checker AI - Love Check
+                        & Compatibility Test</h2>
+                    <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] mb-3 last:mb-0 md:text-[1.05rem]">
+                        <strong class="text-primary">Step-by-step guide to use our Love Checker AI - Love Check
+                            compatibility test online</strong>
+                    </p>
+                    <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] mb-3 last:mb-0 md:text-[1.05rem]">
+                        Here is how to use our advanced love tester and perform a free love check:</p>
+                    <ol class="ml-5 mt-2.5 text-sm leading-relaxed text-[rgba(17,24,39,0.85)] md:text-[1.05rem]">
+                        <li class="mb-2">Go to the <strong>Love Checker AI</strong> calculator section above.</li>
+                        <li class="mb-2">Enter your name and your crush's name into the two different input boxes to
+                            begin the compatibility test.</li>
+                        <li class="mb-2">Click the "Start Love Check" button to run the love tester.</li>
+                        <li class="mb-2">View your love check results. The love tester will display a compatibility
+                            percentage score along with a personalized interpretation of your love check and what the
+                            score means for your relationship.</li>
+                    </ol>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <footer
@@ -419,6 +401,17 @@
             <p class="mt-4 text-muted/70 text-xs md:text-sm">© 2024 Love Calculator. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+            // Set canonical URL dynamically based on current pathname
+            (function () {
+                const baseUrl = 'https://lovecheckerapp.vercel.app';
+                const canonicalLink = document.getElementById('canonical-link');
+                if (canonicalLink) {
+                    canonicalLink.href = baseUrl + window.location.pathname;
+                }
+            })();
+    </script>
 
     <script src="script.js"></script>
     <script src="common.js"></script>
