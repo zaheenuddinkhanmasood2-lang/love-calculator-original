@@ -3,46 +3,37 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    
-    <!-- Homepage - Main Calculator -->
+
+    <!-- Homepage -->
     <url>
         <loc>https://thelovetester.vercel.app/</loc>
-        <lastmod>2024-01-15</lastmod>
+        <lastmod>2026-02-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-    
-    <!-- About Page (within index.html) -->
-    <url>
-        <loc>https://thelovetester.vercel.app/#about</loc>
-        <lastmod>2024-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
+
     <!-- Disclaimer Page -->
     <url>
         <loc>https://thelovetester.vercel.app/disclaimer.html</loc>
-        <lastmod>2024-01-15</lastmod>
+        <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
-    
+
     <!-- Privacy Policy Page -->
     <url>
         <loc>https://thelovetester.vercel.app/privacy.html</loc>
-        <lastmod>2024-01-15</lastmod>
+        <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-    
-    <!-- Terms of Service / Policy Page -->
+
+    <!-- Terms / Policy Page -->
     <url>
         <loc>https://thelovetester.vercel.app/policy.html</loc>
-        <lastmod>2024-01-15</lastmod>
+        <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
-    
-</urlset>
 
+</urlset>
