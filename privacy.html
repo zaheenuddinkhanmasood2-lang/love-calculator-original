@@ -39,29 +39,53 @@
 
 <body class="font-sans bg-gradient-romantic text-text-light min-h-screen overflow-x-hidden relative">
     <div class="fixed top-0 left-0 w-full h-full z-0 overflow-hidden">
-        <div class="absolute rounded-full blur-[80px] opacity-50 w-[500px] h-[500px] bg-[rgba(179,0,45,0.8)] -top-[200px] -left-[200px] animate-float"></div>
-        <div class="absolute rounded-full blur-[80px] opacity-50 w-[400px] h-[400px] bg-[rgba(255,107,138,0.7)] -bottom-[200px] -right-[200px] animate-float" style="animation-delay: 5s;"></div>
-        <div class="absolute rounded-full blur-[80px] opacity-50 w-[350px] h-[350px] bg-[rgba(255,227,234,0.7)] top-1/2 -right-[100px] animate-float" style="animation-delay: 10s;"></div>
+        <div
+            class="absolute rounded-full blur-[80px] opacity-50 w-[500px] h-[500px] bg-[rgba(179,0,45,0.8)] -top-[200px] -left-[200px] animate-float">
+        </div>
+        <div class="absolute rounded-full blur-[80px] opacity-50 w-[400px] h-[400px] bg-[rgba(255,107,138,0.7)] -bottom-[200px] -right-[200px] animate-float"
+            style="animation-delay: 5s;"></div>
+        <div class="absolute rounded-full blur-[80px] opacity-50 w-[350px] h-[350px] bg-[rgba(255,227,234,0.7)] top-1/2 -right-[100px] animate-float"
+            style="animation-delay: 10s;"></div>
     </div>
 
-    <div class="hidden fixed top-0 left-0 w-full h-full bg-black/70 z-[999] opacity-0 transition-opacity duration-300 ease-in-out" id="menuOverlay"></div>
-    <nav class="fixed top-0 left-0 right-0 z-[1000] py-3 px-4 backdrop-blur-[20px] bg-[rgba(17,3,12,0.95)] border-b border-[rgba(255,107,138,0.7)] md:py-[18px] md:px-10">
+    <div class="hidden fixed top-0 left-0 w-full h-full bg-black/70 z-[999] opacity-0 transition-opacity duration-300 ease-in-out"
+        id="menuOverlay"></div>
+    <nav
+        class="fixed top-0 left-0 right-0 z-[1000] py-3 px-4 backdrop-blur-[20px] bg-[rgba(17,3,12,0.95)] border-b border-[rgba(255,107,138,0.7)] md:py-[18px] md:px-10">
         <div class="max-w-[1200px] mx-auto flex justify-between items-center relative">
             <div class="flex items-center">
-                <a href="index.html" class="flex items-center justify-center w-9 h-9 bg-transparent border border-[rgba(255,107,138,0.5)] rounded-full text-text-light no-underline text-xl transition-all duration-300 cursor-pointer mr-2.5 hover:bg-[rgba(255,107,138,0.2)] hover:border-[rgba(255,107,138,0.9)] hover:-translate-x-[3px] active:-translate-x-[1px] md:w-10 md:h-10 md:text-2xl md:mr-4" aria-label="Go back">←</a>
-                <a href="index.html" class="text-xl font-extrabold tracking-wide text-gradient-main no-underline flex items-center gap-2 md:text-[1.8rem]">💕 LoveTester</a>
+                <a href="index.html"
+                    class="flex items-center justify-center w-9 h-9 bg-transparent border border-[rgba(255,107,138,0.5)] rounded-full text-text-light no-underline text-xl transition-all duration-300 cursor-pointer mr-2.5 hover:bg-[rgba(255,107,138,0.2)] hover:border-[rgba(255,107,138,0.9)] hover:-translate-x-[3px] active:-translate-x-[1px] md:w-10 md:h-10 md:text-2xl md:mr-4"
+                    aria-label="Go back">←</a>
+                <a href="index.html"
+                    class="text-xl font-extrabold tracking-wide text-gradient-main no-underline flex items-center gap-2 md:text-[1.8rem]">💕
+                    LoveTester</a>
             </div>
-            <button class="flex flex-col cursor-pointer p-1 bg-transparent border-none z-[1001] md:hidden" id="menuToggle" aria-label="Toggle menu">
-                <span class="w-[25px] h-[3px] bg-gradient-main my-[3px] transition-all duration-300 rounded-[3px]"></span>
-                <span class="w-[25px] h-[3px] bg-gradient-main my-[3px] transition-all duration-300 rounded-[3px]"></span>
-                <span class="w-[25px] h-[3px] bg-gradient-main my-[3px] transition-all duration-300 rounded-[3px]"></span>
+            <button class="flex flex-col cursor-pointer p-1 bg-transparent border-none z-[1001] md:hidden"
+                id="menuToggle" aria-label="Toggle menu">
+                <span
+                    class="w-[25px] h-[3px] bg-gradient-main my-[3px] transition-all duration-300 rounded-[3px]"></span>
+                <span
+                    class="w-[25px] h-[3px] bg-gradient-main my-[3px] transition-all duration-300 rounded-[3px]"></span>
+                <span
+                    class="w-[25px] h-[3px] bg-gradient-main my-[3px] transition-all duration-300 rounded-[3px]"></span>
             </button>
             <ul class="fixed top-0 -right-full w-[280px] h-screen bg-[rgba(17,3,12,0.98)] backdrop-blur-[30px] flex-col p-[80px_30px_30px] gap-0 transition-[right] duration-300 ease-in-out shadow-[-5px_0_20px_rgba(0,0,0,0.5)] border-l border-[rgba(255,107,138,0.7)] z-[1000] md:static md:flex md:w-auto md:h-auto md:bg-transparent md:backdrop-blur-0 md:flex-row md:flex-nowrap md:gap-5 md:p-0 md:shadow-none md:border-l-0 md:list-none"
                 id="navLinks">
-                <li class="w-full border-b border-[rgba(255,107,138,0.2)] md:w-auto md:border-b-0"><a href="index.html" class="text-muted no-underline font-medium transition-all duration-300 relative py-[18px] block text-lg w-full md:py-[5px] md:w-auto">Checker</a></li>
-                <li class="w-full border-b border-[rgba(255,107,138,0.2)] md:w-auto md:border-b-0"><a href="about.html" class="text-muted no-underline font-medium transition-all duration-300 relative py-[18px] block text-lg w-full md:py-[5px] md:w-auto">About</a></li>
-                <li class="w-full border-b border-[rgba(255,107,138,0.2)] md:w-auto md:border-b-0"><a href="disclaimer.html" class="text-muted no-underline font-medium transition-all duration-300 relative py-[18px] block text-lg w-full md:py-[5px] md:w-auto">Disclaimer</a></li>
-                <li class="w-full border-b border-[rgba(255,107,138,0.2)] md:w-auto md:border-b-0"><a href="privacy.html" class="text-white no-underline font-medium transition-all duration-300 relative py-[18px] block text-lg w-full md:py-[5px] md:w-auto active whitespace-nowrap">Privacy Policy</a></li>
+                <li class="w-full border-b border-[rgba(255,107,138,0.2)] md:w-auto md:border-b-0"><a href="index.html"
+                        class="text-muted no-underline font-medium transition-all duration-300 relative py-[18px] block text-lg w-full md:py-[5px] md:w-auto">Checker</a>
+                </li>
+                <li class="w-full border-b border-[rgba(255,107,138,0.2)] md:w-auto md:border-b-0"><a href="about.html"
+                        class="text-muted no-underline font-medium transition-all duration-300 relative py-[18px] block text-lg w-full md:py-[5px] md:w-auto">About</a>
+                </li>
+                <li class="w-full border-b border-[rgba(255,107,138,0.2)] md:w-auto md:border-b-0"><a
+                        href="disclaimer.html"
+                        class="text-muted no-underline font-medium transition-all duration-300 relative py-[18px] block text-lg w-full md:py-[5px] md:w-auto">Disclaimer</a>
+                </li>
+                <li class="w-full border-b border-[rgba(255,107,138,0.2)] md:w-auto md:border-b-0"><a
+                        href="privacy.html"
+                        class="text-white no-underline font-medium transition-all duration-300 relative py-[18px] block text-lg w-full md:py-[5px] md:w-auto active whitespace-nowrap">Privacy
+                        Policy</a></li>
             </ul>
         </div>
     </nav>
@@ -69,11 +93,13 @@
     <div class="relative z-[1] min-h-screen pt-24 px-4 pb-8 max-w-[1200px] mx-auto md:pt-[120px] md:px-5 md:pb-10">
         <div class="max-w-[900px] mx-auto w-full">
             <div class="text-center mb-8 md:mb-[50px] w-full">
-                <h1 class="text-2xl font-extrabold text-gradient-main mb-4 md:text-[3.5rem] md:mb-5 w-full">Privacy Policy</h1>
+                <h1 class="text-2xl font-extrabold text-gradient-main mb-4 md:text-[3.5rem] md:mb-5 w-full">Privacy
+                    Policy</h1>
             </div>
 
             <div class="grid gap-5 md:gap-[30px]">
-                <div class="bg-gradient-to-br from-light-section to-[#ffd0dd] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
+                <div
+                    class="bg-gradient-to-br from-light-section to-[#ffd0dd] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
                     <h3 class="text-lg mb-3 text-primary md:text-[1.8rem] md:mb-4">🔒 Data Collection and Storage</h3>
                     <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] md:text-lg">
                         The Love Tester operates entirely within your web browser. We do not collect, transmit, or
@@ -83,79 +109,131 @@
                     </p>
                 </div>
 
-                <div class="bg-[rgba(255,227,234,0.95)] border-l-[4px] border-secondary backdrop-blur-[20px] rounded-[20px] p-6 border-t border-r border-b border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
+                <div
+                    class="bg-[rgba(255,227,234,0.95)] border-l-[4px] border-secondary backdrop-blur-[20px] rounded-[20px] p-6 border-t border-r border-b border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
                     <h3 class="text-lg mb-3 text-primary md:text-[1.8rem] md:mb-4">💾 Local Storage</h3>
                     <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] md:text-lg">
-                        For your convenience, the Tester may store your calculation history using 
-                        the local storage feature of your browser. 
+                        For your convenience, the Tester may store your calculation history using
+                        the local storage feature of your browser.
                         This information is never sent to an external server;
-                        it is only kept on your device. You have complete control over this data, 
+                        it is only kept on your device. You have complete control over this data,
                         and you can delete it whenever you want using the Tester's clear history feature
                         or your browser's settings.
                     </p>
                 </div>
 
-                <div class="bg-[rgba(255,207,221,0.95)] border-l-[4px] border-accent backdrop-blur-[20px] rounded-[20px] p-6 border-t border-r border-b border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
+                <div
+                    class="bg-[rgba(255,207,221,0.95)] border-l-[4px] border-accent backdrop-blur-[20px] rounded-[20px] p-6 border-t border-r border-b border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
                     <h3 class="text-lg mb-3 text-primary md:text-[1.8rem] md:mb-4">🌐 Information</h3>
                     <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] md:text-lg">
                         Like most websites,
                         our server may automatically collect common technical
                         information such as your IP address, device type, browser type, and
-                        pages viewed. This data is only utilized for website analytics and 
+                        pages viewed. This data is only utilized for website analytics and
                         enhancement and cannot be used to personally identify you. This technical data
                         is not combined with any personal information you input into the Tester AI.
                     </p>
                 </div>
 
-                <div class="bg-gradient-to-br from-light-section to-[#ffd0dd] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
+                <div
+                    class="bg-gradient-to-br from-light-section to-[#ffd0dd] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
                     <h3 class="text-lg mb-3 text-primary md:text-[1.8rem] md:mb-4">🍪 Cookies and Tracking</h3>
                     <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] md:text-lg">
-                        Cookies and related technologies may be used on this website to improve your browsing experience and track website traffic.  
-                        These cookies are only used for functional purposes, like remembering your preferences, 
+                        Cookies and related technologies may be used on this website to improve your browsing experience
+                        and track website traffic.
+                        These cookies are only used for functional purposes, like remembering your preferences,
                         and do not contain any personal information.
                         Your browser's preferences allow you to manage cookie settings.
                     </p>
                 </div>
 
-                <div class="bg-gradient-to-br from-light-section to-[#ffd0dd] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
+                <div
+                    class="bg-gradient-to-br from-light-section to-[#ffd0dd] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
                     <h3 class="text-lg mb-3 text-primary md:text-[1.8rem] md:mb-4">External Services 🔐</h3>
                     <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] md:text-lg">
-                        You can be sure that no third parties will receive your personal information.   
-                        Our AI Tester is completely independent and has no connections to social media, advertising agencies,
-                        or information providers.   
+                        You can be sure that no third parties will receive your personal information.
+                        Our AI Tester is completely independent and has no connections to social media, advertising
+                        agencies,
+                        or information providers.
                         Your privacy will be protected throughout, so you can use the tool with total confidence.
                     </p>
                 </div>
 
-                <div class="bg-gradient-to-br from-light-section to-[#ffd0dd] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
+                <div
+                    class="bg-gradient-to-br from-light-section to-[#ffd0dd] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
                     <h3 class="text-lg mb-3 text-primary md:text-[1.8rem] md:mb-4">👤 Your Rights</h3>
                     <ul class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] ml-5 mt-2.5 md:text-lg">
-                        <li class="mb-2.5">You are in control of your identity and you have the right to an anonymous use of the
+                        <li class="mb-2.5">You are in control of your identity and you have the right to an anonymous
+                            use of the
                             Tester.</li>
                         <li class="mb-2.5">If you want, you can wipe out all your calculated history anytime.</li>
-                        <li class="mb-2.5">If saving the history is not your thing, then you can turn off local storage through your
+                        <li class="mb-2.5">If saving the history is not your thing, then you can turn off local storage
+                            through your
                             browser's settings.</li>
-                        <li class="mb-2.5">You can always use the AI Tester in the private/incognito mode so that no one knows you are
+                        <li class="mb-2.5">You can always use the AI Tester in the private/incognito mode so that no one
+                            knows you are
                             there.</li>
                         <li class="mb-2.5">No sign-up or registration process is necessary to access the service.</li>
                     </ul>
                 </div>
 
-                <div class="bg-gradient-to-br from-light-section to-[#ffd0dd] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
+                <div
+                    class="bg-gradient-to-br from-light-section to-[#ffd0dd] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_18px_45px_rgba(0,0,0,0.5)] transition-all duration-300 text-text-dark hover:-translate-y-[3px] hover:border-[rgba(255,107,138,0.9)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.8)] md:p-10 md:rounded-[25px]">
                     <h3 class="text-lg mb-3 text-primary md:text-[1.8rem] md:mb-4">📅 Policy Modifications</h3>
                     <p class="text-sm leading-relaxed text-[rgba(17,24,39,0.85)] md:text-lg">
-                        We periodically update this privacy statement to reflect changes in our business practices and to comply 
+                        We periodically update this privacy statement to reflect changes in our business practices and
+                        to comply
                         with legal requirements. To understand how we're protecting your information,
-                        we encourage you to check this page frequently. 
+                        we encourage you to check this page frequently.
                         You accept the updated policy if you keep using the AI Tester after any updates go into effect.
+                        For more details about our practices, see our <a href="disclaimer.html"
+                            class="text-accent font-semibold hover:underline">Disclaimer</a>.
                     </p>
+                </div>
+
+                <!-- Related Links Section -->
+                <div
+                    class="mt-8 p-6 bg-[rgba(255,107,138,0.1)] border border-[rgba(255,107,138,0.5)] rounded-[20px] md:p-8">
+                    <h3 class="text-lg font-semibold text-gradient-main mb-4 md:text-xl">📚 Other Pages</h3>
+                    <p class="text-sm text-muted mb-4 md:text-base">Explore more about our Love Tester and how we
+                        operate:</p>
+                    <div class="flex flex-wrap gap-3 md:gap-4">
+                        <a href="index.html"
+                            class="inline-block px-4 py-2 bg-[rgba(179,0,45,0.8)] text-white rounded-[10px] text-sm font-semibold transition-all duration-300 hover:bg-[rgba(179,0,45,1)] md:px-6 md:py-3 md:text-base">Love
+                            Tester</a>
+                        <a href="about.html"
+                            class="inline-block px-4 py-2 bg-[rgba(179,0,45,0.8)] text-white rounded-[10px] text-sm font-semibold transition-all duration-300 hover:bg-[rgba(179,0,45,1)] md:px-6 md:py-3 md:text-base">About</a>
+                        <a href="disclaimer.html"
+                            class="inline-block px-4 py-2 bg-[rgba(179,0,45,0.8)] text-white rounded-[10px] text-sm font-semibold transition-all duration-300 hover:bg-[rgba(179,0,45,1)] md:px-6 md:py-3 md:text-base">Disclaimer</a>
+                        <a href="policy.html"
+                            class="inline-block px-4 py-2 bg-[rgba(179,0,45,0.8)] text-white rounded-[10px] text-sm font-semibold transition-all duration-300 hover:bg-[rgba(179,0,45,1)] md:px-6 md:py-3 md:text-base">Terms</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer class="text-center py-6 px-4 text-muted text-sm mt-8 border-t border-white/6 md:py-[30px] md:px-5 md:text-[0.95rem] md:mt-[50px]">
-        No data leaves your browser. Your privacy is protected.
+    <footer
+        class="relative z-[1] text-center py-8 px-4 text-muted text-sm mt-8 border-t border-white/6 md:py-10 md:px-5 md:text-[0.95rem] md:mt-[50px]">
+        <div class="max-w-[1200px] mx-auto">
+            <p class="mb-4 md:mb-5">No data leaves your browser. Your privacy is protected.</p>
+            <nav class="flex flex-wrap justify-center gap-4 md:gap-6" aria-label="Footer navigation">
+                <a href="index.html"
+                    class="text-muted hover:text-accent transition-colors duration-300 underline-offset-4 hover:underline">Love
+                    Tester</a>
+                <span class="text-muted/50">|</span>
+                <a href="policy.html"
+                    class="text-muted hover:text-accent transition-colors duration-300 underline-offset-4 hover:underline">Terms
+                    of Service</a>
+                <span class="text-muted/50">|</span>
+                <a href="disclaimer.html"
+                    class="text-muted hover:text-accent transition-colors duration-300 underline-offset-4 hover:underline">Disclaimer</a>
+                <span class="text-muted/50">|</span>
+                <a href="about.html"
+                    class="text-muted hover:text-accent transition-colors duration-300 underline-offset-4 hover:underline">About</a>
+            </nav>
+            <p class="mt-4 text-muted/70 text-xs md:text-sm">© 2026 Love Tester. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="common.js"></script>
