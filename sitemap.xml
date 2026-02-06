@@ -6,7 +6,7 @@
     
     <!-- Homepage - Main Calculator -->
     <url>
-        <loc>https://lovecheckerapp.vercel.app/</loc>
+        <loc>https://thelovetester.vercel.app/</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -14,7 +14,7 @@
     
     <!-- About Page (within index.html) -->
     <url>
-        <loc>https://lovecheckerapp.vercel.app/#about</loc>
+        <loc>https://thelovetester.vercel.app/#about</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -22,7 +22,7 @@
     
     <!-- Disclaimer Page -->
     <url>
-        <loc>https://lovecheckerapp.vercel.app/disclaimer.html</loc>
+        <loc>https://thelovetester.vercel.app/disclaimer.html</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -30,7 +30,7 @@
     
     <!-- Privacy Policy Page -->
     <url>
-        <loc>https://lovecheckerapp.vercel.app/privacy.html</loc>
+        <loc>https://thelovetester.vercel.app/privacy.html</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -38,7 +38,7 @@
     
     <!-- Terms of Service / Policy Page -->
     <url>
-        <loc>https://lovecheckerapp.vercel.app/policy.html</loc>
+        <loc>https://thelovetester.vercel.app/policy.html</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>

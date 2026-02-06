@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://lovecheckerapp.vercel.app/sitemap.xml
+Sitemap: https://thelovetester.vercel.app/sitemap.xml
 
 # Disallow generator tool
 Disallow: /create-favicons.html

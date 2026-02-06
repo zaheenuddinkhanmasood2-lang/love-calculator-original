@@ -1,7 +1,7 @@
 {
-  "name": "love-Checker",
+  "name": "love-Tester",
   "version": "1.0.0",
-  "description": "Powered by smart algorithms, this love checker AI analyzes your connection. Perform a love check now to see if it's true love. Try the #1 love checker today.",
+  "description": "Powered by smart algorithms, this love Tester AI analyzes your connection. Perform a love Test now to see if it's true love. Try the #1 love Tester today.",
   "homepage": "https://github.com/zaheenuddinkhanmasood2-lang/Love-Calculator-original#readme",
   "bugs": {
     "url": "https://github.com/zaheenuddinkhanmasood2-lang/Love-Calculator-original/issues"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/zaheenuddinkhanmasood2-lang/Love-Calculator-original.git"
   },
   "license": "ISC",
-  "author": "Love Checker AI",
+  "author": "Love Tester AI",
   "type": "commonjs",
   "main": "common.js",
   "scripts": {

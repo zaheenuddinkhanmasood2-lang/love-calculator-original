@@ -542,7 +542,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (navigator.share) {
                 try {
                     await navigator.share({
-                        title: 'Love Check Challenge',
+                        title: 'Love Test Challenge',
                         text: `I got a ${score}% match! Can you beat me?`,
                         url: challengeLink
                     });
