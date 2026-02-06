@@ -330,6 +330,19 @@ function escapeHtml(text) {
 
 // Wait for DOM to be ready
 document.addEventListener('DOMContentLoaded', function () {
+    // Initialize game state and badge system
+    if (typeof GameState !== 'undefined') {
+        GameState.init();
+    }
+    if (typeof BadgeSystem !== 'undefined') {
+        BadgeSystem.init();
+    }
+
+    // Handle challenge links on page load
+    if (typeof ChallengeSystem !== 'undefined') {
+        ChallengeSystem.handleChallengeLink();
+    }
+
     // DOM Elements
     const form = document.getElementById('loveForm');
     if (!form) return; // Exit if form doesn't exist (not on calculator page)
@@ -402,12 +415,90 @@ document.addEventListener('DOMContentLoaded', function () {
         resultDiv.classList.remove('hidden');
         resultDiv.classList.add('block', 'animate-slideUp');
 
+        // Show share button
+        const shareSection = document.getElementById('shareSection');
+        if (shareSection) {
+            shareSection.classList.remove('hidden');
+            shareSection.classList.add('block', 'animate-slideUp');
+        }
+
+        // Store current result for challenge link (use first name as challenger)
+        window.currentResult = {
+            challengerName: rawName1,
+            score: score
+        };
+
         // Announce to screen readers
         scoreDisplay.setAttribute('aria-label', `Love compatibility score: ${score} percent`);
     }
 
     // Event Listeners
     form.addEventListener('submit', handleSubmit);
+
+    // Challenge/Share Button Handler
+    const challengeBtn = document.getElementById('challengeBtn');
+    if (challengeBtn) {
+        challengeBtn.addEventListener('click', async function() {
+            if (!window.currentResult) {
+                Toast.error('Please calculate a result first!');
+                return;
+            }
+
+            const { challengerName, score } = window.currentResult;
+            const challengeLink = ChallengeSystem.generateChallengeLink(challengerName, score);
+            
+            // Try Web Share API first (mobile-friendly)
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title: 'Love Check Challenge',
+                        text: `I got a ${score}% match! Can you beat me?`,
+                        url: challengeLink
+                    });
+                    // Increment share count
+                    GameState.incrementShare();
+                    Toast.success('Challenge shared! 🎉');
+                    return;
+                } catch (err) {
+                    // User cancelled or error, fall back to clipboard
+                    if (err.name !== 'AbortError') {
+                        console.error('Share failed:', err);
+                    }
+                }
+            }
+
+            // Fallback to clipboard
+            try {
+                await navigator.clipboard.writeText(challengeLink);
+                GameState.incrementShare();
+                Toast.success('Challenge link copied to clipboard! 📋');
+            } catch (err) {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = challengeLink;
+                textArea.style.position = 'fixed';
+                textArea.style.opacity = '0';
+                document.body.appendChild(textArea);
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    GameState.incrementShare();
+                    Toast.success('Challenge link copied to clipboard! 📋');
+                } catch (e) {
+                    Toast.error('Failed to copy link. Please try again.');
+                }
+                document.body.removeChild(textArea);
+            }
+        });
+    }
+
+    // Badge Modal Trigger
+    const showBadgesBtn = document.getElementById('showBadgesBtn');
+    if (showBadgesBtn) {
+        showBadgesBtn.addEventListener('click', function() {
+            BadgeSystem.show();
+        });
+    }
 
     // Keyboard support
     name1Input.addEventListener('keydown', function (event) {

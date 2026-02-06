@@ -10,8 +10,7 @@
     <meta name="title" content="Love Checker AI: Instant Compatibility Love Check (Free)">
     <meta name="description"
         content="Powered by advanced Love Checker AI, get an instant compatibility score. Perform a free love check now to test your bond! The ultimate love checker for couples.">
-    <meta name="keywords"
-        content="love checker, love check, love checker AI, compatibility test, relationship Checker">
+    <meta name="keywords" content="love checker, love check, love checker AI, compatibility test, relationship Checker">
     <meta name="author" content="Love Checker">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -199,6 +198,26 @@
         </div>
     </nav>
 
+    <!-- Challenge Hero Section -->
+    <div id="challengeHero"
+        class="hidden relative z-[1] min-h-[90vh] flex items-center justify-center px-4 max-w-[1200px] mx-auto pt-24 md:pt-32 md:px-5">
+        <div class="animate-fadeIn w-full max-w-[700px] mx-auto relative text-center">
+            <div
+                class="bg-[rgba(17,3,12,0.9)] backdrop-blur-[20px] rounded-[20px] p-6 border border-[rgba(255,107,138,0.7)] shadow-[0_24px_60px_rgba(0,0,0,0.8)] md:p-[50px] md:rounded-[30px]">
+                <h2 class="text-3xl font-extrabold mb-4 text-gradient-main md:text-5xl md:mb-6">
+                    Challenge Accepted! 🎯
+                </h2>
+                <p class="text-xl text-muted mb-6 md:text-2xl md:mb-8">
+                    <span id="challengerName" class="text-gradient-main font-bold"></span> got a <span
+                        id="challengerScore" class="text-gradient-main font-bold"></span> Match!
+                </p>
+                <p class="text-lg text-text-light mb-8 md:text-xl">
+                    Can you beat them? Enter your names below to find out! 💕
+                </p>
+            </div>
+        </div>
+    </div>
+
     <!-- Hero Section - Exactly 100vh -->
     <div
         class="relative z-[1] min-h-[90vh] flex items-center justify-center px-4 max-w-[1200px] mx-auto pt-24 md:pt-32 md:px-5">
@@ -251,6 +270,14 @@
                     </div>
                     <div class="text-base text-white/70 leading-relaxed whitespace-pre-line px-2 md:text-lg md:px-0"
                         id="descriptionDisplay"> </div>
+
+                    <!-- Challenge Link Button -->
+                    <div id="shareSection" class="mt-6 hidden">
+                        <button id="challengeBtn"
+                            class="w-full py-3 bg-gradient-main border-none rounded-[15px] text-white text-base font-bold font-sans cursor-pointer transition-all duration-300 relative overflow-hidden shadow-[0_0_0_1px_rgba(255,107,138,0.8),0_12px_30px_rgba(0,0,0,0.8)] hover:-translate-y-[3px] hover:shadow-[0_0_0_1px_rgba(255,107,138,1),0_0_35px_rgba(255,107,138,0.9),0_16px_40px_rgba(0,0,0,0.95)] active:-translate-y-[1px] md:py-[18px] md:text-xl">
+                            🔗 Challenge a Friend
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -387,6 +414,15 @@
         class="relative z-[1] text-center py-8 px-4 text-muted text-sm mt-8 border-t border-white/6 md:py-10 md:px-5 md:text-[0.95rem] md:mt-[50px]">
         <div class="max-w-[1200px] mx-auto">
             <p class="mb-4 md:mb-5">No data leaves your browser. Your privacy is protected.</p>
+
+            <!-- My Trophies Button -->
+            <div class="mb-4 md:mb-5">
+                <button id="showBadgesBtn"
+                    class="px-6 py-3 bg-gradient-main border-none rounded-[15px] text-white text-base font-bold font-sans cursor-pointer transition-all duration-300 relative overflow-hidden shadow-[0_0_0_1px_rgba(255,107,138,0.8),0_8px_20px_rgba(0,0,0,0.6)] hover:-translate-y-[2px] hover:shadow-[0_0_0_1px_rgba(255,107,138,1),0_0_25px_rgba(255,107,138,0.8),0_12px_30px_rgba(0,0,0,0.8)] active:-translate-y-[1px]">
+                    🏆 My Trophies
+                </button>
+            </div>
+
             <nav class="flex flex-wrap justify-center gap-4 md:gap-6" aria-label="Footer navigation">
                 <a href="privacy.html"
                     class="text-muted hover:text-accent transition-colors duration-300 underline-offset-4 hover:underline">Privacy
@@ -415,6 +451,10 @@
             })();
     </script>
 
+    <script src="gameState.js"></script>
+    <script src="challenge.js"></script>
+    <script src="toast.js"></script>
+    <script src="badges.js"></script>
     <script src="script.js"></script>
     <script src="common.js"></script>
 </body>
