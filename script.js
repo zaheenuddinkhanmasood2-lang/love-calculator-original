@@ -388,6 +388,86 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     /**
+     * Shows loading animation with progress bar
+     */
+    function showLoadingAnimation() {
+        const loadingDiv = document.getElementById('loadingAnimation');
+        const progressBar = document.getElementById('progressBar');
+        const loadingText = document.getElementById('loadingText');
+        const loadingSubtext = document.getElementById('loadingSubtext');
+        const calculateBtn = document.getElementById('calculateBtn');
+
+        if (!loadingDiv || !progressBar) return;
+
+        // Hide result and show loading
+        resultDiv.classList.add('hidden');
+        resultDiv.classList.remove('block');
+        loadingDiv.classList.remove('hidden');
+        loadingDiv.classList.add('block', 'animate-fadeIn');
+
+        // Disable button
+        if (calculateBtn) {
+            calculateBtn.disabled = true;
+            calculateBtn.style.opacity = '0.6';
+            calculateBtn.style.cursor = 'not-allowed';
+        }
+
+        // Loading messages sequence
+        const messages = [
+            { text: 'AI Scanning...', subtext: 'Analyzing compatibility patterns...' },
+            { text: 'Processing Names...', subtext: 'Calculating character frequencies...' },
+            { text: 'Matching Patterns...', subtext: 'Finding romantic connections...' },
+            { text: 'Finalizing Results...', subtext: 'Almost there...' }
+        ];
+
+        let progress = 0;
+        const duration = 3000; // 3 seconds
+        const interval = 50; // Update every 50ms
+        const totalSteps = duration / interval;
+        const progressIncrement = 100 / totalSteps;
+        let messageIndex = 0;
+
+        const progressInterval = setInterval(() => {
+            progress += progressIncrement;
+
+            // Update progress bar
+            progressBar.style.width = Math.min(progress, 100) + '%';
+
+            // Update messages at intervals
+            const messageStep = Math.floor((progress / 100) * messages.length);
+            if (messageStep < messages.length && messageStep !== messageIndex) {
+                messageIndex = messageStep;
+                if (loadingText) loadingText.textContent = messages[messageIndex].text;
+                if (loadingSubtext) loadingSubtext.textContent = messages[messageIndex].subtext;
+            }
+
+            if (progress >= 100) {
+                clearInterval(progressInterval);
+            }
+        }, interval);
+    }
+
+    /**
+     * Hides loading animation and shows results
+     */
+    function hideLoadingAnimation() {
+        const loadingDiv = document.getElementById('loadingAnimation');
+        const calculateBtn = document.getElementById('calculateBtn');
+
+        if (loadingDiv) {
+            loadingDiv.classList.add('hidden');
+            loadingDiv.classList.remove('block');
+        }
+
+        // Re-enable button
+        if (calculateBtn) {
+            calculateBtn.disabled = false;
+            calculateBtn.style.opacity = '1';
+            calculateBtn.style.cursor = 'pointer';
+        }
+    }
+
+    /**
      * Handles form submission and calculates the love score.
      * @param {Event} event - The form submit event
      */
@@ -400,36 +480,47 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        // Calculate score
+        // Show loading animation
+        showLoadingAnimation();
+
+        // Calculate score (do this immediately but delay showing results)
         const score = calculateScore(name1Input.value, name2Input.value);
         const rawName1 = name1Input.value.trim();
         const rawName2 = name2Input.value.trim();
         const feedback = getFeedback(score, rawName1, rawName2);
 
-        // Display results
-        scoreDisplay.textContent = score + '%';
-        messageDisplay.textContent = feedback.title;
-        descriptionDisplay.textContent = feedback.description;
+        // After 3 seconds, hide loading and show results
+        setTimeout(() => {
+            hideLoadingAnimation();
 
-        // Show result with animation
-        resultDiv.classList.remove('hidden');
-        resultDiv.classList.add('block', 'animate-slideUp');
+            // Display results
+            scoreDisplay.textContent = score + '%';
+            messageDisplay.textContent = feedback.title;
+            descriptionDisplay.textContent = feedback.description;
 
-        // Show share button
-        const shareSection = document.getElementById('shareSection');
-        if (shareSection) {
-            shareSection.classList.remove('hidden');
-            shareSection.classList.add('block', 'animate-slideUp');
-        }
+            // Show result with animation
+            resultDiv.classList.remove('hidden');
+            resultDiv.classList.add('block', 'animate-slideUp');
 
-        // Store current result for challenge link (use first name as challenger)
-        window.currentResult = {
-            challengerName: rawName1,
-            score: score
-        };
+            // Show share button
+            const shareSection = document.getElementById('shareSection');
+            if (shareSection) {
+                shareSection.classList.remove('hidden');
+                shareSection.classList.add('block', 'animate-slideUp');
+            }
 
-        // Announce to screen readers
-        scoreDisplay.setAttribute('aria-label', `Love compatibility score: ${score} percent`);
+            // Store current result for challenge link (use first name as challenger)
+            window.currentResult = {
+                challengerName: rawName1,
+                score: score
+            };
+
+            // Announce to screen readers
+            scoreDisplay.setAttribute('aria-label', `Love compatibility score: ${score} percent`);
+
+            // Scroll to result
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 3000);
     }
 
     // Event Listeners
@@ -438,7 +529,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Challenge/Share Button Handler
     const challengeBtn = document.getElementById('challengeBtn');
     if (challengeBtn) {
-        challengeBtn.addEventListener('click', async function() {
+        challengeBtn.addEventListener('click', async function () {
             if (!window.currentResult) {
                 Toast.error('Please calculate a result first!');
                 return;
@@ -446,7 +537,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const { challengerName, score } = window.currentResult;
             const challengeLink = ChallengeSystem.generateChallengeLink(challengerName, score);
-            
+
             // Try Web Share API first (mobile-friendly)
             if (navigator.share) {
                 try {
@@ -495,7 +586,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Badge Modal Trigger
     const showBadgesBtn = document.getElementById('showBadgesBtn');
     if (showBadgesBtn) {
-        showBadgesBtn.addEventListener('click', function() {
+        showBadgesBtn.addEventListener('click', function () {
             BadgeSystem.show();
         });
     }

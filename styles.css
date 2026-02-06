@@ -290,4 +290,54 @@ h1.text-gradient-main {
     animation: fadeIn 0.6s ease-in;
 }
 
+/* Loading Animation Styles */
+.loading-dot {
+    animation: bounce 1.4s infinite ease-in-out both;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Progress Bar Glow Effect */
+#progressBar {
+    box-shadow: 0 0 10px rgba(255, 107, 138, 0.6),
+                0 0 20px rgba(255, 107, 138, 0.4),
+                0 0 30px rgba(255, 107, 138, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+#progressBar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
 
