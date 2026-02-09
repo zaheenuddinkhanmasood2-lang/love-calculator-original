@@ -1,4 +1,5 @@
 @keyframes float {
+
     0%,
     100% {
         transform: translate(0, 0) scale(1);
@@ -50,6 +51,7 @@
 }
 
 @keyframes pulse-ring {
+
     0%,
     100% {
         transform: scale(1);
@@ -63,6 +65,7 @@
 }
 
 @keyframes shake {
+
     0%,
     100% {
         transform: translateX(0);
@@ -216,7 +219,7 @@
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
 }
 
-.faq-answer > div {
+.faq-answer>div {
     border-top: 1px solid rgba(255, 107, 138, 0.3);
     padding-top: 1rem;
 }
@@ -272,9 +275,11 @@ h1.text-gradient-main {
         transform: scale(0.8) rotate(-5deg);
         opacity: 0;
     }
+
     50% {
         transform: scale(1.1) rotate(5deg);
     }
+
     100% {
         transform: scale(1) rotate(0deg);
         opacity: 1;
@@ -296,10 +301,14 @@ h1.text-gradient-main {
 }
 
 @keyframes bounce {
-    0%, 80%, 100% {
+
+    0%,
+    80%,
+    100% {
         transform: scale(0);
         opacity: 0.5;
     }
+
     40% {
         transform: scale(1);
         opacity: 1;
@@ -309,8 +318,8 @@ h1.text-gradient-main {
 /* Progress Bar Glow Effect */
 #progressBar {
     box-shadow: 0 0 10px rgba(255, 107, 138, 0.6),
-                0 0 20px rgba(255, 107, 138, 0.4),
-                0 0 30px rgba(255, 107, 138, 0.2);
+        0 0 20px rgba(255, 107, 138, 0.4),
+        0 0 30px rgba(255, 107, 138, 0.2);
     position: relative;
     overflow: hidden;
 }
@@ -322,12 +331,10 @@ h1.text-gradient-main {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.3),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
     animation: shimmer 2s infinite;
 }
 
@@ -335,9 +342,8 @@ h1.text-gradient-main {
     0% {
         transform: translateX(-100%);
     }
+
     100% {
         transform: translateX(100%);
     }
 }
-
-
