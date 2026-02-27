@@ -1,6 +1,6 @@
 {
-    "name": "Love Tester AI - Compatibility Calculator",
-    "short_name": "LoveTester",
+    "name": "Love Tester AI -  Real Love Compatibility Test (Unblocked)",
+    "short_name": "Love Tester AI",
     "description": "Test your love compatibility with the ultimate Love Tester AI. Real Name Matching, Love Language style insights, and Zodiac Match in one free, unblocked love test.",
     "icons": [
         {
@@ -25,4 +25,3 @@
     "start_url": "/",
     "orientation": "portrait-primary"
 }
-
