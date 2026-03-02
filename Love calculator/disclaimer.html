@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <title>Disclaimer - Love Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Romantic blood‑red palette */
+            --primary: #b3002d;
+            --secondary: #80001f;
+            --accent: #ff6b8a;
+            --light-section: #ffe3ea;
+            /* pale rose for light sections */
+            --bg-deep: #11030a;
+            /* deep background */
+            --text-light: #ffffff;
+            --text-dark: #111827;
+            --muted: #fecdd3;
+            --border-subtle: rgba(255, 107, 138, 0.7);
+            --glass-bg: rgba(17, 3, 12, 0.9);
+            --gradient-1: radial-gradient(circle at top left, #b3002d 0%, #4b0012 45%, #11030a 90%);
+            --gradient-2: linear-gradient(135deg, rgba(179, 0, 45, 0.85), rgba(255, 107, 138, 0.8));
+            --gradient-3: linear-gradient(135deg, #b3002d 0%, #ff6b8a 50%, #ffe3ea 100%);
+            --gradient-main: linear-gradient(135deg, #b3002d 0%, #ff6b8a 55%, #ffe3ea 100%);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            /* Deep romantic blood‑red background */
+            background: var(--gradient-1);
+            color: var(--text-light);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animated Background */
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bg-shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.5;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .bg-shape-1 {
+            width: 500px;
+            height: 500px;
+            background: rgba(179, 0, 45, 0.8);
+            top: -200px;
+            left: -200px;
+            animation-delay: 0s;
+        }
+
+        .bg-shape-2 {
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 107, 138, 0.7);
+            bottom: -200px;
+            right: -200px;
+            animation-delay: 5s;
+        }
+
+        .bg-shape-3 {
+            width: 350px;
+            height: 350px;
+            background: rgba(255, 227, 234, 0.7);
+            top: 50%;
+            right: -100px;
+            animation-delay: 10s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            33% {
+                transform: translate(50px, 50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-50px, 50px) scale(0.9);
+            }
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 18px 40px;
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            background: rgba(17, 3, 12, 0.95);
+            border-bottom: 1px solid rgba(255, 107, 138, 0.7);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .back-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 1px solid rgba(255, 107, 138, 0.5);
+            border-radius: 50%;
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 107, 138, 0.2);
+            border-color: rgba(255, 107, 138, 0.9);
+            transform: translateX(-3px);
+        }
+
+        .back-button:active {
+            transform: translateX(-1px);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-main);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--text-light);
+        }
+
+        /* Mobile Menu Toggle Button */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+            background: transparent;
+            border: none;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--gradient-main);
+            margin: 3px 0;
+            transition: all 0.3s;
+            border-radius: 3px;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Mobile Menu Overlay */
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .menu-overlay.active {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Page Container */
+        .page-container {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            padding: 120px 20px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* About Page */
+        .about-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .about-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+        }
+
+        .about-content {
+            display: grid;
+            gap: 30px;
+        }
+
+        .info-card {
+            background: linear-gradient(145deg, var(--light-section), #ffd0dd);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 40px;
+            border: 1px solid var(--border-subtle);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+            color: var(--text-dark);
+        }
+
+        .info-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(255, 107, 138, 0.9);
+            box-shadow: 0 22px 55px rgba(0, 0, 0, 0.8);
+        }
+
+        .info-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .info-card p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(17, 24, 39, 0.85);
+        }
+
+        .info-card ul {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(17, 24, 39, 0.85);
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .info-card li {
+            margin-bottom: 10px;
+        }
+
+        .algorithm-info {
+            background: rgba(255, 227, 234, 0.95);
+            border-left: 4px solid var(--secondary);
+        }
+
+        .privacy-info {
+            background: rgba(255, 207, 221, 0.95);
+            border-left: 4px solid var(--accent);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 12px 15px;
+            }
+
+            .nav-container {
+                position: relative;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: rgba(17, 3, 12, 0.98);
+                -webkit-backdrop-filter: blur(30px);
+                backdrop-filter: blur(30px);
+                flex-direction: column;
+                padding: 80px 30px 30px;
+                gap: 0;
+                transition: right 0.3s ease;
+                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+                border-left: 1px solid rgba(255, 107, 138, 0.7);
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .menu-overlay.active {
+                display: block;
+                opacity: 1;
+            }
+
+            .nav-links li {
+                width: 100%;
+                border-bottom: 1px solid rgba(255, 107, 138, 0.2);
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 18px 0;
+                font-size: 1.1rem;
+                width: 100%;
+            }
+
+            .nav-links a::after {
+                display: none;
+            }
+
+            .nav-links a:hover,
+            .nav-links a.active {
+                color: var(--text-light);
+                padding-left: 10px;
+            }
+
+            .back-button {
+                width: 36px;
+                height: 36px;
+                font-size: 1.3rem;
+                margin-right: 10px;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .about-title {
+                font-size: 2.2rem;
+            }
+
+            .info-card {
+                padding: 25px 18px;
+                border-radius: 20px;
+            }
+
+            .info-card h3 {
+                font-size: 1.4rem;
+            }
+
+            .info-card p,
+            .info-card ul {
+                font-size: 0.95rem;
+            }
+
+            .page-container {
+                padding: 100px 15px 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-title {
+                font-size: 1.8rem;
+            }
+
+            .nav-links {
+                width: 100%;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-animation">
+        <div class="bg-shape bg-shape-1"></div>
+        <div class="bg-shape bg-shape-2"></div>
+        <div class="bg-shape bg-shape-3"></div>
+    </div>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="back-button" aria-label="Go back">←</a>
+                <a href="index.html" class="logo">💕 LoveCalc</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Calculator</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="disclaimer.html" class="active">Disclaimer</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="policy.html">Policy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div class="about-container">
+            <div class="about-header">
+                <h1 class="about-title">Disclaimer</h1>
+            </div>
+
+            <div class="about-content">
+                <div class="info-card">
+                    <h3>⚠️ Entertainment Purpose Only</h3>
+                    <p>
+                        
+                        The Love Calculator was made just for entertainment purposes. 
+                          This tool's compatibility scores and findings are not supported
+                           by relationship, psychological, or scientific research.  
+                            They should not be considered any form of relationship guidance,
+                             professional advice, or counseling.
+                    </p>
+                </div>
+
+                <div class="info-card algorithm-info">
+                    <h3>Scientific Basis🔬</h3>
+                    <p>
+                         This calculator uses a straightforward mathematical algorithm to
+                         translate names into character codes.    There is no scientific basis for this approach in relationship studies, 
+                         psychology, or sociology.    The chemistry, compatibility, and potential of a
+                         real-world relationship are not adequately reflected in the algorithm-generated results.
+                    </p>
+                </div>
+
+                <div class="info-card privacy-info">
+                    <h3>🚫 Not Expert Guidance</h3>
+                    <p>
+                        Never use this tool in place of expert relationship counseling, 
+                        therapy, or guidance.  Real-world interactions, communication
+                        , mutual understanding, and, when necessary, 
+                        professional advice should all be considered when
+                         making significant life decisions
+                         about marriage, relationships, or personal connections.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>📋 Limitations and Restrictions</h3>
+                    <ul>
+                        <li>The calculator does not account for personality traits, values, interests, or life goals.</li>
+                        <li>Findings cannot predict compatibility, future events, or relationship success</li>
+                        <li> The tool shouldn't be used to influence personal or significant relationship decisions.</li>
+                        <li> It's best to approach them humorously and with a lighthearted attitude because the results may vary.</li>
+                        <li>  There are no guarantees or assurances regarding the accuracy or applicability of the results.</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>⚖️ Use as You see Fit</h3>
+                    <p>
+                
+                        By using this love calculator, you acknowledge and agree that you are aware of its limitations and entertainment value.
+                           By using this tool, you agree to release the creators, operators, and
+                            any associated parties from responsibility for any decisions, actions, or results.   
+                            Use this calculator responsibly and remember that real relationships are built on communication, 
+                        respect, understanding, and genuine connections rather than algorithmic calculations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        No data leaves your browser. Your privacy is protected.
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNavLinks = document.getElementById('navLinks');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        function toggleMobileMenu() {
+            menuToggle.classList.toggle('active');
+            mobileNavLinks.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            // Prevent body scroll when menu is open
+            if (mobileNavLinks.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Close menu when clicking overlay (only if menu is open)
+        menuOverlay.addEventListener('click', (e) => {
+            if (mobileNavLinks.classList.contains('active')) {
+                toggleMobileMenu();
+            }
+        });
+
+        menuToggle.addEventListener('click', toggleMobileMenu);
+
+        // Close mobile menu when clicking on a link
+        const allNavLinks = document.querySelectorAll('.nav-links a');
+        allNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+
+        // Close mobile menu on window resize if it becomes desktop view
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && mobileNavLinks.classList.contains('active')) {
+                menuToggle.classList.remove('active');
+                mobileNavLinks.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+</body>
+
+</html>
+
